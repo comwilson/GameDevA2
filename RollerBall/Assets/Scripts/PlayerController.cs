@@ -35,13 +35,14 @@ public class PlayerController : MonoBehaviour {
 
 	void OnTriggerEnter(Collider col){
 		if (col.gameObject.tag == "Pickup") {
-			col.gameObject.SetActive(false);
+			col.gameObject.SetActive (false);
 			count += 1;
-			if (count == pickupsToExit)
-			{
-				ExitTrigger.SetActive(true);
-				ExitIndicator.SetActive(true);
+			if (count == pickupsToExit) {
+				ExitTrigger.SetActive (true);
+				ExitIndicator.SetActive (true);
 			}
+		} else if (col.gameObject.tag == "ResetTrigger") {
+			this.transform.position = new Vector3(0f, 0.5f, 0f);
 		}
 	}
 }
