@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\AppearanceTrigger.cs" />
      <Compile Include="Assets\Scripts\CameraTargetController.cs" />
+     <Compile Include="Assets\Scripts\CreeperController.cs" />
      <Compile Include="Assets\Scripts\KeyHandler.cs" />
      <Compile Include="Assets\Scripts\LevelChangeController.cs" />
      <Compile Include="Assets\Scripts\MenuSelection.cs" />

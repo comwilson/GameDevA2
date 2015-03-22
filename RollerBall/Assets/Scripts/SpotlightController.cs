@@ -13,6 +13,6 @@ public class SpotlightController : MonoBehaviour {
 	void Update () {
 		float mH = Input.GetAxis ("Horizontal");
 		float mV = Input.GetAxis ("Vertical");
-		transform.position = Player.transform.position + offset + (new Vector3(mH, 0, mV));
+		transform.position = Player.transform.position + offset + (Quaternion.AngleAxis(45, Vector3.up)*(new Vector3(mH, 0, mV)));
 	}
 }

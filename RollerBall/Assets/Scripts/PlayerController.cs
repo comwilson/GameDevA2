@@ -21,14 +21,16 @@ public class PlayerController : MonoBehaviour {
 		var rb = this.GetComponent<Rigidbody> ();
 
 		Vector3 movement = new Vector3 (moveHorizontal, 0, moveVertical);
+		movement = Quaternion.AngleAxis (45, Vector3.up) * movement;
+
 		rb.AddForce (movement * speed * Time.deltaTime);
 		// Slow down if the player isn't trying to move:
-		if (!(Mathf.Abs(moveHorizontal) > 0.0f || Mathf.Abs(moveVertical) > 0.0f)) {
+		/*if (!(Mathf.Abs(moveHorizontal) > 0.0f || Mathf.Abs(moveVertical) > 0.0f)) {
 			rb.velocity *= 0.95f;
 			if (rb.velocity.magnitude < 0.5f) {
 				rb.velocity = Vector3.zero;
 			}
-		}
+		}*/
 
 
 	}
